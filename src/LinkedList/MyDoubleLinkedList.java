@@ -1,10 +1,12 @@
+package LinkedList;
+
 /**
  * @author ：ZYJ
  * @version :1.0.0
  * @since :2020/7/27 4:27 PM
  * implementation of the double linked list.
  */
-class MyDoubleLinkedList {
+public class MyDoubleLinkedList {
     private final MyDoubleNode guideNode;
     private MyDoubleNode tailNode;
     private int size;

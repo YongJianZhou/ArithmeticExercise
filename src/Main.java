@@ -1,5 +1,7 @@
+import LinkedList.MyDoubleLinkedList;
+
 /**
- * ["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get",
+ * ["LinkedList.MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get",
  * "addAtHead","addAtIndex","addAtHead"]
  * [[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]]
  */
