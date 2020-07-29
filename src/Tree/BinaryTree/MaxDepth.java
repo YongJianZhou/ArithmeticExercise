@@ -1,4 +1,4 @@
-package tree.BinaryTree;
+package Tree.BinaryTree;
 
 /**
  * @author ：ZYJ
