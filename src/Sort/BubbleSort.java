@@ -24,10 +24,6 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int a = 1;
-        for (int i : sort(new int[]{9, 3, 414, 231, 1231, 213145})) {
-            System.out.println(i);
-        }
-        System.out.println(a);
+        SortInput.inputArray(sort(new int[]{1, 2, 6, 1, 4, 6, 8}));
     }
 }
