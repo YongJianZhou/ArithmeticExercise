@@ -1,6 +1,4 @@
-package LinkedList;
-
-import java.util.ArrayList;
+package linkedList;
 
 /**
  * @author ：ZYJ
