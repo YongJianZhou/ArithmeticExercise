@@ -14,24 +14,44 @@ package search;
  * @since :2020/9/10 09:52
  */
 public class BinarySearch {
-    public int search(int[] nums, int target) {
-        return searchByRecursion(nums, 0, nums.length - 1, target);
+    public static int search(int[] nums, int target) {
+        return searchWithoutRepeatElementByRecursion(nums, 0, nums.length - 1, target);
     }
 
-    public int searchByRecursion(int[] nums, int start, int end, int target) {
+    public static int searchWithoutRepeatElementByRecursion(int[] nums, int start, int end, int target) {
         if (start > end) return -1;
         int middle = start + ((end - start) >> 1);
         if (target == nums[middle]) {
             return middle;
         } else if (target > nums[middle]) {
-            return searchByRecursion(nums, middle + 1, end, target);
+            return searchWithoutRepeatElementByRecursion(nums, middle + 1, end, target);
         } else {
-            return searchByRecursion(nums, start, middle - 1, target);
+            return searchWithoutRepeatElementByRecursion(nums, start, middle - 1, target);
         }
     }
 
+    public static int searchFirstWithRepeatElement(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+        while (low <= high) {
+            int middle = low + ((high - low) >> 1);
+            if (nums[middle] > target) {
+                high = middle - 1;
+            } else if (nums[middle] < target) {
+                low = middle + 1;
+            } else {
+                if (middle == 0 || nums[middle - 1] != nums[middle]) {
+                    return middle;
+                } else {
+                    high = middle - 1;
+                }
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
-        BinarySearch search = new BinarySearch();
-        System.out.println(search.search(new int[]{-1, 0, 3, 5, 6, 9, 12}, 3));
+        System.out.println(search(new int[]{-1, 0, 3, 5, 6, 9, 12}, 3));
+        System.out.println(searchFirstWithRepeatElement(new int[]{-1, 0, 3, 3, 3, 3, 5, 6, 9, 12}, 3));
     }
 }
