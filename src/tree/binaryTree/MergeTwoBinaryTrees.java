@@ -23,7 +23,7 @@ package tree.binaryTree;
 public class MergeTwoBinaryTrees {
 
     /**
-     * 自己
+     * 自己实现的算法，比较啰嗦
      *
      * @param t1
      * @param t2
