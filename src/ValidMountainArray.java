@@ -1,3 +1,4 @@
+
 /**
  * @author ：ZYJ
  * @version :1.0.0
@@ -24,9 +25,21 @@ public class ValidMountainArray {
         if (A.length < 3) {
             return false;
         }
+        int i = 0;
+        int length = A.length;
+        while (i < length - 1 && A[i + 1] > A[i]) {
+            i++;
+        }
+        if (i == 0 || i == length - 1) {
+            return false;
+        }
+        while (i < length - 1 && A[i] > A[i + 1]) {
+            i++ ;
+        }
+        return  i == length -1;
     }
 
     public static void main(String[] args) {
-        System.out.println(validMountainArray(new int[]{0,3,2,1}));
+        System.out.println(validMountainArray(new int[]{1, 0, 3, 2, 1}));
     }
 }
