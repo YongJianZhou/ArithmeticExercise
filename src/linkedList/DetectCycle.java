@@ -42,7 +42,6 @@ public class DetectCycle {
             }
             head = head.next;
         }
-
         return null;
     }
     //TODO fast and low pointer
